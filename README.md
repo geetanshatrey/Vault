@@ -39,19 +39,42 @@ For demonstration purposes, the project contains two sections in itself - the Va
 - At the bottom we have a Tab Bar which has App Home selected. It has another tab for the How it Works section.
 - Both the cards(Vault & the Wallet) have a beautiful neumorphic look with an aesthetic background as well as card shadow. The logo on the cards make it very easy for the user to understand the purpose of the card.
 
-**Vault App**
+**Vault App Page**
 - On clicking the Vault card on the App Home section, we get to the Vault(2 factor authenticator) page.
 - Here we see the list of real time based OTPs of different wallets presented in form of a ListView in front of the user.
 - Each of the List element has the wallet name at the top. Then it has the real time OTP in a larger text size. And on its side, it has a real time circular progress bar which shows the time left before this 0TP expires for a wallet. 
 - At the top the NavigationBar has also been integrated, with the Vault app logo at the tab bar center and the Back button to navigate to the App Home.
 
-**Wallet App**
+**Wallet App Pages**
+- On clicking the Wallet card on the App Home section, we get to the Wallet(List of Wallets) page.
+- Here we see the list of wallets, each of which are secured by 2 factor authentication.
+- Each card in the list represents a wallet, namely - MyCrypto, YouPay and Stonkup.
+- For a particular card, we see the logo of the Wallet. 
+- It's followed by a Unlock button which is used to unlock a particular Wallet using real time OTP.
+- Each card has a shadow alongside it, which gives it a simple yet aesthetic look.
 
 **Let's try to Unlock a Wallet**
+- In order to unlock a wallet we first need to see the real time generated OTP from the Vault App page.
+- Then we need to go to the Wallets App page and enter that OTP in the respective wallet. 
+- For example: In the following video, the OTP generated for MyCrypto Wallet is 826108. This is observed from going into the Vault app page.
+- Then we go to the Wallets app page and click on Unlock Wallet for MyCrypto Wallet. 
+- We are then asked to enter the OTP in the given textfields. 
+- On entering the correct OTP, we click on the Verify button and then the wallet is unlocked and we get to the wallet details page for MyCrypto wallet.
+- Here the User Interface is very intuitive and easy to use for a user. There is a separate Unlock button for each of the Wallets which makes it clear for the user, which wallet they want to Unlock.
 
 **Entering an Invalid OTP**
+- Let's consider another case where the user enters a wrong OTP. In that case the wallet does not unlock and the user is presented with an alert overlay that they have entered a wrong OTP.
+- For example: In the following video, the OTP generated at that moment of time is 966903.
+- We then go to the Wallets App page and try to unlock the MyCrypto Wallet.
+- But we enter the OTP to be different, in this case 966901. On clicking on Verify, we see an alert overlay in the app asking us to check the OTP again.
+- Thus it is verified that a wallet can only be unlocked by using its real time generated OTP in the Vault App page. Also a wallet can only be opened by their own OTP and not by OTP of other wallets.
 
 **How it Works Section**
+- Apart from the App Home section, we have another section in the app called How It Works. 
+- On selecting the How It Works section from the tab bar, we get to this section.
+- Here the user is presented with information about how 2 factor authentication works behind the scenes, in form of a horizontal carousel of cards. 
+- Each of the cards has different texts, images to explain concepts around 2 factor authentication like Time based OTP Algorithm(TOTP), SHA1 Cryptographic Function and HMAC based OTP Algorithm(HOTP).
+- This carousel is a horizontal list of scrollable cards. This kind of a User Interface helps to maintain the user's interest in this section, as they are presented with a lot of new information.
 
 ## Technologies Used
 ![CryptoKit](https://img.shields.io/badge/-SwiftUI-black?style=for-the-badge&logo=swift&logoColor=blue)
